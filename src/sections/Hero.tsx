@@ -47,12 +47,12 @@ export default function Hero() {
   ]);
   return (
     <section
-      className="py-24 overflow-x-clip"
+      className=" overflow-x-clip"
       style={{
         cursor: `url("${svgCursor}") 16 16, auto`,
       }}
     >
-      <div className="z-10 flex min-h-64 items-center justify-center">
+      <div className="z-10 flex min-h-32 items-center justify-center">
         <AnimatedGradientText>
           🎉 <hr className="mx-2 h-4 w-px shrink-0 bg-white" />{" "}
           <span
