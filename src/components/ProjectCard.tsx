@@ -22,14 +22,16 @@ export default function ProjectCard(props: {
   return (
     <div
       className={twMerge(
-        "bg-neutral-900 border border-white/10 p-6 rounded-3xl",
+        "bg-neutral-900 border border-white/10 p-8 rounded-3xl shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-xl",
         className
       )}
     >
-      <div className="aspect-video">{children}</div>
+      <div className="aspect-video overflow-hidden rounded-xl">{children}</div>
       <div>
-        <h3 className="text-3xl font-medium mt-6 font-poppins">{title}</h3>
-        <p className="text-white/50 mt-2">{description}</p>
+        <h3 className="text-3xl font-semibold mt-6 font-poppins text-lime-400">
+          {title}
+        </h3>
+        <p className="text-lime-400/60 mt-2">{description}</p>
       </div>
       <div className="flex justify-between items-center mt-4">
         <div className="flex flex-wrap gap-2">{icones}</div>
@@ -37,7 +39,7 @@ export default function ProjectCard(props: {
           href={description2Link}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 text-white/50 hover:text-white transition-colors"
+          className="flex items-center gap-2 text-white hover:text-lime-300 transition-colors"
         >
           {description2}
           <FaLocationArrow />
