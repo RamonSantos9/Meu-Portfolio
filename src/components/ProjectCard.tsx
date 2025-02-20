@@ -22,18 +22,18 @@ export default function ProjectCard(props: {
   return (
     <div
       className={twMerge(
-        "bg-neutral-900 border border-white/10 p-8 rounded-3xl shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-xl",
+        "bg-neutral-900 border border-white/10 p-8 rounded-3xl shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-xl flex flex-col",
         className
       )}
     >
       <div className="aspect-video overflow-hidden rounded-xl">{children}</div>
-      <div>
-        <h3 className="text-3xl font-semibold mt-6 font-poppins text-lime-400">
+      <div className="mt-6">
+        <h3 className="text-3xl font-semibold font-poppins text-lime-400">
           {title}
         </h3>
         <p className="text-lime-400/60 mt-2">{description}</p>
       </div>
-      <div className="flex justify-between items-center mt-4">
+      <div className="flex justify-between items-center mt-auto pt-8">
         <div className="flex flex-wrap gap-2">{icones}</div>
         <a
           href={description2Link}

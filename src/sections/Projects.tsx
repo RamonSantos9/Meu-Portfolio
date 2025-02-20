@@ -1,11 +1,13 @@
 import Tag from "@/components/Tag";
 import ProjectCard from "@/components/ProjectCard";
 import Image from "next/image";
-import exemplo from "@/assets/images/embreve.png";
+import preview2 from "@/assets/images/preview2.png";
 import preview from "@/assets/images/preview.png";
 import reactIcon from "@/assets/images/react-logo.png";
 import tailwindIcon from "@/assets/images/tailwind-logo.png";
 import typescriptIcon from "@/assets/images/typescript-logo.png";
+import nextjsIcon from "@/assets/images/next-logo2.png";
+import javascriptIcon from "@/assets/images/javascript-logo.png";
 
 export default function Projects() {
   return (
@@ -44,6 +46,16 @@ export default function Projects() {
                     className="w-6 h-6"
                   />
                 </div>
+                <div className="flex items-center gap-2">
+                  <Image src={nextjsIcon} alt="nextjs" className="w-6 h-6" />
+                </div>
+                <div className="flex items-center gap-2">
+                  <Image
+                    src={javascriptIcon}
+                    alt="javascript"
+                    className="w-6 h-6"
+                  />
+                </div>
               </>
             }
           >
@@ -56,10 +68,10 @@ export default function Projects() {
             </div>
           </ProjectCard>
           <ProjectCard
-            title="Projetos em Breve"
-            description="Estou em processo de criação de projetos incríveis. Em breve, você poderá conferir as soluções e experiências inovadoras que estou preparando."
+            title="Ramon-Portfólio"
+            description="Desenvolvido com foco em apresentar os projetos, habilidades e experiências Minha Ramon Santos conhecer melhor o trabalho e a trajetória deste desenvolvedor."
             description2="Ver Projeto"
-            description2Link=""
+            description2Link="https://ramonsantosportfolio.vercel.app"
             className="md:col-span-2 lg:col-span-1 group"
             icones={
               <>
@@ -80,12 +92,22 @@ export default function Projects() {
                     className="w-6 h-6"
                   />
                 </div>
+                <div className="flex items-center gap-2">
+                  <Image src={nextjsIcon} alt="nextjs" className="w-6 h-6" />
+                </div>
+                <div className="flex items-center gap-2">
+                  <Image
+                    src={javascriptIcon}
+                    alt="javascript"
+                    className="w-6 h-6"
+                  />
+                </div>
               </>
             }
           >
             <div className="aspect-video flex items-center justify-center">
               <Image
-                src={exemplo}
+                src={preview2}
                 alt="Progresso ao Vivo"
                 className="object-cover group-hover:scale-110 rounded-xl transition duration-300"
               />
