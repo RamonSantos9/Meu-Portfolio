@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import logoImage from "@/assets/images/logo.png";
-import Button from "@/components/Button";
 import { twMerge } from "tailwind-merge";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -121,7 +120,6 @@ export default function Navbar() {
                         {link.label}
                       </a>
                     ))}
-                    <Button variant="secondary">Contato</Button>
                   </div>
                 </motion.div>
               )}

@@ -8,8 +8,8 @@ const classes = cva(
       variant: {
         primary:
           "bg-lime-400 text-neutral-950 border-line-400 border-[#9EA3BF]",
-        secondary: "text-white bg-transparent border-[#9EA3BF]",
-        tertiary: "text-white bg-transparent rounded-[17px] border-[#9EA3BF]",
+        secondary: "text-white bg-zinc-950 border-[#9EA3BF]",
+        tertiary: "text-white bg-zinc-950 rounded-[17px] border-[#9EA3BF]",
       },
       size: {
         sm: "h-10 px-4",

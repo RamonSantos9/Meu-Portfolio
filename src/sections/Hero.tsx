@@ -6,6 +6,7 @@ import { motion, useAnimate } from "framer-motion";
 import { useEffect } from "react";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 import { cn } from "@/lib/utils";
+import { InteractiveGridPattern } from "@/components/magicui/interactive-grid-pattern";
 
 export default function Hero() {
   const [leftPointerScope, leftPointerAnimate] = useAnimate();
@@ -52,12 +53,21 @@ export default function Hero() {
         cursor: `url("${svgCursor}") 16 16, auto`,
       }}
     >
+      <div className="flex w-full flex-col items-center justify-center overflow-hidden rounded-lg">
+        <InteractiveGridPattern
+          className={cn(
+            "[mask-image:radial-gradient(ellipse_400px_250px_at_center,white,transparent)]",
+            "inset-x-0 inset-y-[-55%] h-[200%] skew-y-12"
+          )}
+        />
+      </div>
+
       <div className="z-10 flex min-h-32 items-center justify-center">
         <AnimatedGradientText>
           🎉 <hr className="mx-2 h-4 w-px shrink-0 bg-white" />{" "}
           <span
             className={cn(
-              `inline animate-gradient bg-gradient-to-r from-[#A3E635] via-[#ffffff] to-[#1ED96F] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`
+              `inline animate-gradient bg-gradient-to-r from-[#1ED96F] via-[#ffffff] to-[#1ED96F] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`
             )}
           >
             Bem-vindo
@@ -81,20 +91,21 @@ export default function Hero() {
         <Pointer name="Santos" color="red" />
       </motion.div>
       <div className="container">
-        <h1 className="text-6xl md:text-7xl font-medium font-poppins text-center mt-6 bg-gradient-to-br from-[#FFFFF7] bg-clip-text text-transparent">
+        <h1 className="text-6xl md:text-7xl font-medium font-poppins text-center mt-6 bg-gradient-to-br from-[#FFFFFF] bg-clip-text text-transparent">
           Olá, eu sou o Ramon
         </h1>
 
-        <p className="text-center font-poppins text-regular text-[#7D7F78] mt-8 mg-lg">
+        <p className="text-center font-poppins text-regular text-white/70 mt-8 mg-lg">
           Sou estudante de Análise e Desenvolvimento de Sistemas, <br />
           apaixonado por transformar ideias em interfaces incríveis.
         </p>
+        {/* Botões Hero */}
         <div className="flex justify-center gap-3 mt-6">
           <a
             href="https://drive.google.com/file/d/1HDy-VcnR9qgO3p16-VX1ecchHq4xyY-X/view"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block"
+            className="inline-block relative"
           >
             <Button
               variant="secondary"
@@ -125,7 +136,7 @@ export default function Hero() {
           >
             <Button
               variant="tertiary"
-              className="md:inline-flex items-center"
+              className="items-center relative"
               size="sm"
             >
               <svg
@@ -159,7 +170,7 @@ export default function Hero() {
           >
             <Button
               variant="tertiary"
-              className="md:inline-flex items-center"
+              className="md:inline-flex items-center relative"
               size="sm"
             >
               <svg
